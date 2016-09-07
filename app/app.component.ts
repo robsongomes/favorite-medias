@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'my-app',
-    template: '<h1>Angular 2 Essencial</h1>'
+    selector: 'fav-medias',
+    template: `
+        {{pageTitle}}
+        <media-item></media-item>
+    `
 })
 export class AppComponent {
-    
+    pageTitle: string = 'Meus Filmes e Séries Favoritos';
 }
