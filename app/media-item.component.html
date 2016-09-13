@@ -1,0 +1,28 @@
+<div class="col-sm-6 col-md-6 col-lg-6">
+    
+    <div class="row">
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <img src="http://placehold.it/140x180" alt="Imagem do Filme">
+        </div>        
+
+        <div class="col-sm-8 col-md-8 col-lg-8">
+            <h2> {{ mediaItem.name }} <span class="year">({{mediaItem.year}})</span></h2>
+            <div>
+                <label>Categoria:</label>
+                <span>{{ mediaItem.category }}</span>
+            </div>
+            <div>
+                <label>Gênero:</label>
+                <span>{{ mediaItem.genre }}</span>
+            </div>
+            <div>
+                <label>Favorito:</label>
+                <span>{{ mediaItem.isFavorite ? 'Sim' : 'Não' }}</span>
+            </div>
+            <div>
+                <button class="btn btn-success" (click)="onClick()">Meu botão</button>
+            </div>
+        </div>
+
+    </div>
+</div>  
