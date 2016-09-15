@@ -1,18 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 @Component({
     selector: 'media-item',
     templateUrl: 'app/media-item.component.html'
 })
 export class MediaItemComponent {
-    mediaItem: any = {
-        name: 'Procurando Dory', 
-        year: 2016, 
-        genre: "Animação", 
-        category: 'Filme', 
-        isFavorite: true
-    };
+    
+    @Input() mediaItem;
 
-    onClick() {
-        console.log('clicou');
+    @Output() favorited = new EventEmitter();
+
+    onFavorite() {
+        this.favorited.next(this.mediaItem);
     }
 }
