@@ -1,0 +1,4 @@
+<media-item *ngFor="let media of mediaItems"
+    (favorited)="onFavorite($event)" 
+    [mediaItem]="media">
+</media-item>

@@ -1,4 +1,4 @@
-<div class="col-sm-6 col-md-6 col-lg-6">
+<div class="media-item col-sm-6 col-md-6 col-lg-6">
     
     <div class="row">
         <div class="col-sm-4 col-md-4 col-lg-4">
@@ -15,12 +15,16 @@
                 <label>Gênero:</label>
                 <span>{{ mediaItem.genre }}</span>
             </div>
-            <div>
+             <div>
                 <label>Favorito:</label>
                 <span>{{ mediaItem.isFavorite ? 'Sim' : 'Não' }}</span>
             </div>
             <div>
-                <button class="btn btn-success" (click)="onFavorite()">Favoritar!</button>
+                <button class="btn" [ngClass]="{'btn-success': !mediaItem.isFavorite, 'btn-danger': mediaItem.isFavorite}" 
+                    (click)="onFavorite()">
+                    <span *ngIf="mediaItem.isFavorite">Tirar dos Favoritos</span>
+                    <span *ngIf="!mediaItem.isFavorite">Favoritar</span>
+                </button>
             </div>
         </div>
 
