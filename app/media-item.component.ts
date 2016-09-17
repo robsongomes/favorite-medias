@@ -11,6 +11,7 @@ export class MediaItemComponent {
     @Output() favorited = new EventEmitter();
 
     onFavorite() {
+        this.mediaItem.isFavorite = !this.mediaItem.isFavorite;
         this.favorited.next(this.mediaItem);
     }
 }

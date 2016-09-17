@@ -8,7 +8,6 @@ export class MediaItemListComponent {
 
     onFavorite(mediaItem) {
         console.log(`O ${mediaItem.category} foi alterado: ${mediaItem.name}`);
-        mediaItem.isFavorite = !mediaItem.isFavorite;
     }
 
     mediaItems = [

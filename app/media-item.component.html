@@ -6,7 +6,9 @@
         </div>        
 
         <div class="col-sm-8 col-md-8 col-lg-8">
-            <h2 favoriteMedia> {{ mediaItem.name }} <span class="year">({{mediaItem.year}})</span></h2>
+            <h2 [favoriteMedia]="mediaItem.isFavorite" [color]="'lightgray'"> 
+                {{ mediaItem.name }} <span class="year">({{mediaItem.year}})</span>
+            </h2>
             <div>
                 <label>Categoria:</label>
                 <span>{{ mediaItem.category }}</span>
