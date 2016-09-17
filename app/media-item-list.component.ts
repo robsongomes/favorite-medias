@@ -15,7 +15,8 @@ export class MediaItemListComponent {
             name: 'Procurando Dory', 
             year: 2016, 
             genre: "Animação", 
-            category: 'Filme', 
+            category: 'Filme',
+            description: 'É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação', 
             isFavorite: true
         },
         {
@@ -23,13 +24,15 @@ export class MediaItemListComponent {
             year: 2016, 
             genre: "Ficção", 
             category: 'Filme', 
+            description: 'É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação',
             isFavorite: false
         },
         {
             name: 'Invocação do Mal 2', 
             year: 2016, 
             genre: "Terror", 
-            category: 'Filme', 
+            category: 'Filme',
+            description: 'É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação', 
             isFavorite: false
         },
         {
@@ -37,6 +40,7 @@ export class MediaItemListComponent {
             year: 2016, 
             genre: "Ficção", 
             category: 'Filme', 
+            description: 'É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação',
             isFavorite: true
         }
     ]

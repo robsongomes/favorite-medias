@@ -4,7 +4,7 @@ import { Directive, ElementRef, Renderer, HostListener, Input } from '@angular/c
     selector: '[favoriteMedia]'
 })
 export class FavoriteMediaItemDirective {
-    defaultColor: string = 'yellow';
+    defaultColor: string = 'red';
 
     @Input() set color(colorName: string) {
         this.defaultColor = colorName || this.defaultColor;
@@ -16,14 +16,18 @@ export class FavoriteMediaItemDirective {
     }
 
     @HostListener('mouseenter') onMouseEnter() {
-        this.highlight(this.favoriteMedia ? 'lightblue' : this.defaultColor);
+        this.highlight(this.favoriteMedia ? 'yellow' : this.defaultColor);
     }
 
     @HostListener('mouseleave') onMouseLeave() {
         this.highlight(null);
     }
 
+    @HostListener('mouseup') onMouseUp() {
+        this.highlight(null);
+    }
+
     highlight(color: string) {
-        this.renderer.setElementStyle(this.el.nativeElement, 'backgroundColor', color);
+        this.renderer.setElementStyle(this.el.nativeElement, 'color', color);
     }
 }
